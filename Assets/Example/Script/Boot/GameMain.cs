@@ -3,6 +3,7 @@ using Agate.MVC.Core;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Example.Script.Global.SaveData.Controller;
 
 namespace Example.Boot
 {
@@ -15,7 +16,9 @@ namespace Example.Boot
 
         protected override IController[] GetDependencies()
         {
-            return null;
+            return new IController[]{
+            new SaveDataController()
+            };
         }
 
         protected override IEnumerator StartInit()
